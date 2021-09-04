@@ -8,7 +8,7 @@
 """
 import requests
 import urllib3
-
+import warnings
 
 class HttpClient:
     """Generic Http Client class"""
@@ -17,11 +17,11 @@ class HttpClient:
         """Initialize method"""
 
         self.client = requests.session()
-        #无条件信任，不校验ssl
         self.disable_ssl_verify = disable_ssl_verify
         self.timeout = timeout
         if self.disable_ssl_verify:
             urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        warnings.simplefilter('ignore',ResourceWarning)
 
     def Get(self, url, headers=None, data=None, json=None, params=None, *args, **kwargs):
         """Http get method"""
