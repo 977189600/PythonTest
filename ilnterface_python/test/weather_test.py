@@ -8,8 +8,8 @@
 """
 import allure
 
-from unittest import TestCase
 
+from unittest import TestCase
 from ilnterface_python.library.httpclient import HttpClient
 
 
