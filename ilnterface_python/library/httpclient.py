@@ -23,6 +23,7 @@ class HttpClient:
             urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         warnings.simplefilter('ignore',ResourceWarning)
 
+
     def Get(self, url, headers=None, data=None, json=None, params=None, *args, **kwargs):
         """Http get method"""
 
