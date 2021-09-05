@@ -7,7 +7,7 @@
 
 依赖准备： pip install allure-pytest
 
-运行命令： pytest -sv test/weather_test.py --alluredir ./allure-results# PythonApi
+运行命令： pytest -sv test/weather_test.py --alluredir ./allure-results  PythonApi
 
 接口功能自动化测试项目介绍：
 
